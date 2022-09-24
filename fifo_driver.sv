@@ -59,7 +59,7 @@ class fifo_driver extends uvm_driver#(fifo_item);
         `uvm_info("fifo_driver","RESET [ON]",UVM_LOW) 
          begin   
            vif.datain<=  0; 
-           vif.wn<=		 0;  
+           vif.wn<=		   0;  
            vif.rn<=      0;
            vif.full<=    0;
            vif.empty<=   0;
@@ -82,9 +82,9 @@ class fifo_driver extends uvm_driver#(fifo_item);
               vif.wn<=0;
               if(vif.full)
                 //req.print();
-              `uvm_warning("FIFO FULL Asserted","**********Write stop calls()***********")
-               //`uvm_info("fifo_driver","driver [off]",UVM_LOW) 
-              //`uvm_info("driver ",$sformatf("vif.datain=%h vif.rn=%h vif.wn=%h",vif.datain,vif.rn,vif.wn),UVM_LOW)
+                //`uvm_warning("FIFO FULL Asserted","**********Write stop calls()***********")
+                //`uvm_info("fifo_driver","driver [off]",UVM_LOW) 
+                //`uvm_info("driver ",$sformatf("vif.datain=%h vif.rn=%h vif.wn=%h",vif.datain,vif.rn,vif.wn),UVM_LOW)
            end
                 
       //read 
